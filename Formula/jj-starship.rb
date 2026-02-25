@@ -21,6 +21,9 @@ class JjStarship < Formula
     end
   end
 
+  # because its the latest release, checksum is dynamic
+  sha256 ":nocheck"
+
   def install
     bin.install "jj-starship"
   end

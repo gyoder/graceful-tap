@@ -21,6 +21,9 @@ class NeovimNightly < Formula
     end
   end
 
+  # because its the latest release, checksum is dynamic
+  sha256 ":nocheck"
+
   def install
     bin.install "bin/nvim"
     lib.install Dir["lib/*"]
