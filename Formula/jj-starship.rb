@@ -1,5 +1,5 @@
 class JjStarship < Formula
-  desc "jj-starship"
+  desc "Get the latest release of jj-starship from GitHub Releases"
   homepage "https://github.com/dmmulroy/jj-starship"
   version "latest"
 
@@ -14,15 +14,12 @@ class JjStarship < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/dmmulroy/jj-starship/releases/download/v0.7.0/jj-starship-aarch64-unknown-linux-musl.tar.gz"
+      url "https://github.com/dmmulroy/jj-starship/releases/latest/download/jj-starship-aarch64-unknown-linux-musl.tar.gz"
     end
     on_intel do
-      url "https://github.com/dmmulroy/jj-starship/releases/download/v0.7.0/jj-starship-x86_64-unknown-linux-musl.tar.gz"
+      url "https://github.com/dmmulroy/jj-starship/releases/latest/download/jj-starship-x86_64-unknown-linux-musl.tar.gz"
     end
   end
-
-  # because its the latest release, checksum is dynamic
-  sha256 ":nocheck"
 
   def install
     bin.install "jj-starship"

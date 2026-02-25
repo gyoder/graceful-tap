@@ -1,5 +1,5 @@
 class NeovimNightly < Formula
-  desc "Neovim nightly build"
+  desc "Get the Nightly Build from Neovim GitHub Releases"
   homepage "https://neovim.io/"
   version "nightly"
 
@@ -20,9 +20,6 @@ class NeovimNightly < Formula
       url "https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz"
     end
   end
-
-  # because its the latest release, checksum is dynamic
-  sha256 ":nocheck"
 
   def install
     bin.install "bin/nvim"
